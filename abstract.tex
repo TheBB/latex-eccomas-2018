@@ -1,0 +1,46 @@
+\documentclass[12pt]{eccm-ecfd_abstract}
+
+\title{FAST DIVERGENCE-CONFORMING REDUCED ORDER MODELS FOR FLOW PROBLEMS}
+
+\author{Eivind Fonn$^{1}$, Harald van Brummelen$^{2}$, Trond Kvamsdal$^{3}$, Adil
+  Rasheed$^{1}$ and Muhammad S. Siddiqui$^{3}$}
+
+\address{$^{1}$ SINTEF Digital, Kl{\ae}buveien 153 7037 Trondheim NORWAY, eivind.fonn@sintef.no
+\and
+$^{2}$ Eindhoven University of Technology, Department of Mechanical Engineering
+\and
+$^{3}$ NTNU, Department of Mathematical Sciences}
+
+\begin{document}
+
+\noindent {\bf Keywords}: {\it Reduced Basis Methods, Reduced Order Models,
+Proper Orthogonal Decomposition, Navier-Stokes, Divergence-Conforming,
+Isogeometry}
+\vskip0.5cm
+
+Numerical methods and tools for simulating flow around complex geometries have
+evolved rapidly in recent years. However, their usage usually requires access to
+high-performance computating facilities, which is not always feasible. New
+methods are required for an ever-increasing demand for computationally efficient
+desktop tools usable in real-time control, optimization and management. One such
+solution is dimensionality reduction through Reduced Order Modelling (ROM) based
+on Proper Orthogonal Decomposition (POD).\cite{Quarteroni2016rbm}
+
+We detail in this work an experiment involving two-dimensional stationary flow
+around a NACA0015 airfoil at various velocities and angles of attack. Two
+different methods are proposed: one run-of-the-mill reduced basis method based
+on a conventional Taylor-Hood high-fidelity solver, and one based on a
+divergence-conforming isogeometric flow solver. The reduced bases were
+constructed with Proper Orthogonal Decomposition (POD) and enhanced with
+supremizers\cite{Ballarin2015ssp} to stabilize the pressure field. We show how
+the latter method produces a fully divergence-free reduced basis, and how this
+property influences the linear systems by creating three-by-three block
+triangular matrices, a structure that can be exploited for significant speedups
+over the traditional matrix structure arising from the regular method.
+
+\bibliography{common/references}
+\bibliographystyle{plain}
+
+\end{document}
+
+
